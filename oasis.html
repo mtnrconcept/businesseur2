@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Oasis</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#00c6ff, #0072ff);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+.oasis {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border-radius: 50%;
+  background: white;
+  animation: float 4s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.5s;
+  width: 30px;
+  height: 30px;
+  margin: -15px;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 1s;
+  width: 40px;
+  height: 40px;
+  margin: -20px;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -150%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+<body>
+<h1>Bienvenue dans l'oasis</h1>
+<div class="oasis">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+</body>
+</html>
